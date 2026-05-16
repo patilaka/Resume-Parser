@@ -173,4 +173,8 @@ mvn clean package
 
 ## License
 
-Add a license before publishing or distributing this project.
+This project is licensed under the MIT License.
+
+## Creator
+
+Powered by Chhattish. This tool was created by Chhattish, a student passionate about cybersecurity, network programming, and ethical hacking. Feel free to star this repo if you like it.
