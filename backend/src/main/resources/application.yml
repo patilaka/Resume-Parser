@@ -1,0 +1,33 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  cloud:
+    azure:
+      cosmos:
+        endpoint: ${COSMOS_ENDPOINT}
+        key: ${COSMOS_KEY}
+        database: ResumeDb
+      storage:
+        blob:
+          connection-string: ${BLOB_CONNECTION_STRING}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+app:
+  azure:
+    storage:
+      container-name: resumes-raw
+  gemini:
+    api-key: disabled
+  groq:
+    api-key: ${GROQ_API_KEY}
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.azure.cosmos: WARN
+    com.azure.storage.blob: WARN

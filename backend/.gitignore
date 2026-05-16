@@ -1,0 +1,12 @@
+target/
+*/target/
+node_modules/
+.env
+*.env
+*.env.*
+!.env.example
+local.settings.json
+**/local.settings.json
+!local.settings.example.json
+!**/local.settings.example.json
+*.log

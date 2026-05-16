@@ -1,0 +1,42 @@
+# Build directories
+target/
+*/target/
+node_modules/
+dist/
+build/
+
+# Local settings and secrets
+local.settings.json
+**/local.settings.json
+*.env
+*.env.local
+.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Keep example files tracked
+!local.settings.example.json
+!**/local.settings.example.json
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Maven
+.m2/
+mvnwDebug
+mvnwDebug.cmd
+
+# Node
+npm-debug.log
+yarn-error.log
+
+# OS
+Thumbs.db
+.DS_Store
