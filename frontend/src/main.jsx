@@ -1,8 +1,9 @@
+// Improved by Claude Fable 5 – Application entry point
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import HrDashboard from './HrDashboard.jsx'
-import LandingPage from './LandingPage.jsx'
+import HrDashboard from './HrDashboard.jsx'  
+import LandingPage from './LandingPage.jsx' 
 import './index.css'
 
 function Root() {
@@ -23,4 +24,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Root />
   </React.StrictMode>,
-)
+);
