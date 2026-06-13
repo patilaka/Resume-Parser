@@ -1,3 +1,4 @@
+// Improved by Claude Fable 5 – AI Resume Parser (Candidate View)
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
@@ -91,6 +92,18 @@ function SkillTag({ label, type = 'tech' }) {
     <span className={`px-2.5 py-1 rounded-md text-xs font-semibold border ${styles}`}>
       {label}
     </span>
+  );
+}
+
+// ── Reusable Section wrapper ──────────────────────────────────────────────────
+function Section({ icon, title, color, children }) {
+  return (
+    <div>
+      <h4 className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-2 ${color}`}>
+        {icon}{title}
+      </h4>
+      {children}
+    </div>
   );
 }
 
@@ -288,18 +301,6 @@ function CandidateCard({ c }) {
   );
 }
 
-// ── Reusable Section wrapper ──────────────────────────────────────────────────
-function Section({ icon, title, color, children }) {
-  return (
-    <div>
-      <h4 className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-2 ${color}`}>
-        {icon}{title}
-      </h4>
-      {children}
-    </div>
-  );
-}
-
 // ── Main App ──────────────────────────────────────────────────────────────────
 export default function App() {
   const [file, setFile]             = useState(null);
@@ -467,7 +468,7 @@ export default function App() {
               </div>
             ) : (
               <div className="space-y-4">
-                {candidates.map(c => <CandidateCard key={c.id} c={c} />)}
+                {candidates.map(c => <CandidateCard key={c.id || c.trackingId} c={c} />)}
               </div>
             )}
           </div>
